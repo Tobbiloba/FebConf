@@ -20,13 +20,13 @@ const config = {
     extend: {
       colors: {
         dark: {
-          1: '#1C1F2E',
+          1: '#151718',
           2: '#161925',
           3: '#252A41',
           4: '#1E2757',
         },
         blue: {
-          1: '#0E78F9',
+          1: '#102a4c',
         },
         sky: {
           1: '#C9DDFF',
@@ -58,7 +58,7 @@ const config = {
         'accordion-up': 'accordion-up 0.2s ease-out',
       },
       backgroundImage: {
-        hero: "url('/images/hero-background.png')",
+        hero: "url('/icons/appjs.svg')",
       },
     },
   },

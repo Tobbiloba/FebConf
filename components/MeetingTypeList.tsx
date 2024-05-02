@@ -70,8 +70,87 @@ const MeetingTypeList = () => {
   const meetingLink = `${process.env.NEXT_PUBLIC_BASE_URL}/meeting/${callDetail?.id}`;
 
   return (
-    <section className="grid grid-cols-1 gap-5 md:grid-cols-2 xl:grid-cols-4">
+    <section className=" ml-auto grid grid-cols-1 gap-8 md:grid-cols-2 xl:grid-cols-2">
       <HomeCard
+        img="/icons/card/img12.gif"
+        className='bg-[#391a03] border-[#763205]'
+        title="Create A New Meeting"
+        description="Start an instant meeting"
+        handleClick={() => setMeetingState('isInstantMeeting')}
+        buttonText='Create A Room'
+        buttonStyle='bg-orange-500 rounded-md text-black text-[14px] font-[500]'
+        buttonIcon='/icons/arrow-right.svg'
+        titleStyle='text-3xl text-orange-700'
+        smallStyle='text-orange-500 text-[16px]'
+      />
+
+      <HomeCard
+        img="/icons/card/img2.jpg"
+        className='bg-[#2f3903] border-[#6e7605]'
+        title="Join Meeting"
+        description="via invitation link"
+        handleClick={() => setMeetingState('isJoiningMeeting')}
+        buttonText='Join A Room'
+        buttonStyle='bg-green-500 rounded-md text-black font-[500]'
+        buttonIcon='/icons/arrow-right-up.svg'
+        titleStyle='text-3xl text-green-700'
+        smallStyle='text-green-500 text-[16px]'
+      />
+
+      <HomeCard
+        img="/icons/card/img5.png"
+        className='bg-[#390303] border-[#760505]'
+        title="Plan Your Meeting"
+        description="Schadule your meeting"
+        handleClick={() => setMeetingState('isScheduleMeeting')}
+        buttonText='Schedule Meeting'
+        buttonStyle='bg-red-500 rounded-md text-black font-[500]'
+        buttonIcon='/icons/arrow-right-up.svg'
+        titleStyle='text-3xl text-red-700'
+        smallStyle='text-red-500 text-[16px]'
+      />
+
+      <HomeCard
+        img="/icons/card/img10.png"
+        className='bg-[#030539] border-[#050776]'
+        title="View Meeting"
+        description="Meeting Recordings"
+        handleClick={() => router.push('/recordings')}
+        buttonText='View Recordings'
+        buttonStyle='bg-blue-500 rounded-md text-black font-[500]'
+        buttonIcon='/icons/arrow-right.svg'
+        titleStyle='text-3xl text-blue-700'
+        smallStyle='text-blue-500 text-[16px]'
+      />
+
+      <HomeCard
+        img="/icons/card/img4.gif"
+        className='bg-[#393603] border-[#766b05]'
+        title="Code Editor"
+        description="Share Code With Friends"
+        handleClick={() => setMeetingState('isInstantMeeting')}
+        buttonText='Access Code Editor'
+        buttonStyle='bg-yellow-500 rounded-md text-black font-[500]'
+        buttonIcon='/icons/arrow-right.svg'
+        titleStyle='text-3xl text-yellow-700'
+        smallStyle='text-yellow-500 text-[16px]'
+      />
+
+      <HomeCard
+        img="/icons/card/img13.gif"
+        className='bg-[#200339] border-[#4d0576]'
+        title="Save Code"
+        description="Save Code And Access From Anywhere"
+        handleClick={() => setMeetingState('isInstantMeeting')}
+        buttonText='Saved Codes'
+        buttonStyle='bg-purple-500 rounded-md text-black font-[500]'
+        buttonIcon='/icons/arrow-right-up.svg'
+        titleStyle='text-3xl text-purple-700'
+        smallStyle='text-purple-500 text-[16px]'
+      />
+
+
+      {/* <HomeCard
         img="/icons/add-meeting.svg"
         title="New Meeting"
         description="Start an instant meeting"
@@ -97,7 +176,7 @@ const MeetingTypeList = () => {
         description="Meeting Recordings"
         className="bg-yellow-1"
         handleClick={() => router.push('/recordings')}
-      />
+      /> */}
 
       {!callDetail ? (
         <MeetingModal
