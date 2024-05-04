@@ -16,7 +16,7 @@ const Sidebar = () => {
         <input placeholder='search' className='border text-[18px] font-[300] placeholder:text-[#3a3f42] text-[#3a3f42] h-10 w-[100%] pl-8 border-[#3a3f42] rounded-md bg-transparent' />
         
       </div>
-      <div className="flex flex-1 flex-col gap-8 mt-8">
+      <div className="flex flex-1 flex-col gap-8 mt-4">
         {sidebarLinks.map((item) => {
           // const isActive = pathname === item.route || pathname.startsWith(`${item.route}/`);
 

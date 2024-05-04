@@ -17,7 +17,7 @@ import {
 const tabs = [
   {
     text: "1M+",
-    subtext: "community members",
+    subtext: "monthly users",
     className: 'bg-blue-1 text-blue-500',
     
   },
@@ -60,7 +60,7 @@ const Home = () => {
   return (
     <section className="flex lato size-full lato flex-col gap-5 text-white">
 
-      <div className="md:items-center flex flex-col">
+      <div className="md:items-center flex flex-col mb-8">
       <div
         className="
           font-medium
@@ -70,33 +70,33 @@ const Home = () => {
             flex
             justify-center
             xl:font-medium
-            xl:pt-14
+            
             text-center 
             pt-6
             lato
             "
       >
-        Write, plan, share. With AI at your side.
+        FebConf Virtual Meetings
       </div>
 
       <p
         className="
-            text-lg
+            text-md
             pt-4
-            text-center
             w-2/3
             mx-auto
+            text-center
             text-gray-500
             "
       >
-        Bird is the connected workspace where better, faster work happens.
+        FebConf Virtual Meetings is an advanced video conferencing platform designed to streamline communication and collaboration for individuals and teams across distances. 
       </p>
 
       <div className="flex gap-4 pt-6 items-center justify-center">
         <Link href="/">
-          <button className="py-1 ">
+          <button className="py-2 px-5 rounded-md bg-blue-1">
             <div className="flex items-center justify-center">
-              <div className="text-lg">Get bird free</div>
+              <div className="text-lg">Get Started</div>
               <div>
                 <PiArrowRight className="ml-2 " />
               </div>
@@ -105,7 +105,7 @@ const Home = () => {
         </Link>
       </div>
 
-      {/* <div className="pt-4 lato flex w-[100%] justify-center items-center flex-col ">
+      <div className="pt-4 lato flex w-[100%] justify-center items-center flex-col ">
         <div className="grid grid-cols-12 md:row-span-2 gap-4 xl:gap-6 mt-8 px-8  md:px-16 xl:px-0 mx-auto w-[100%]">
           {tabs.map((tab, index) => (
             <div
@@ -131,7 +131,7 @@ const Home = () => {
             </div>
           ))}
         </div>
-      </div> */}
+      </div>
 
     
     </div>

@@ -119,3 +119,34 @@ body {
     width: 100%;
   }
 }
+
+/* .str-video__composite-button__button-group.str-video__composite-button__button-group--active-secondary{
+  background-color: white;
+} */
+
+.str-video__composite-button .str-video__composite-button__button-group .str-video__menu-toggle-button{
+  background-color: antiquewhite;
+  /* border-radius: 4px; */
+}
+
+
+
+
+::-webkit-scrollbar {
+  width: 10px; /* Width of the scrollbar */
+}
+
+/* For Chrome */
+::-webkit-scrollbar-thumb {
+  background-color: #343a35; /* Color of the scrollbar thumb */
+}
+
+/* For WebKit browsers */
+::-webkit-scrollbar-track {
+  background-color: #f1f1f1; /* Color of the scrollbar track */
+}
+
+.str-video__composite-button__button-group.str-video__composite-button__button-group--active-secondary {
+  background-color: #1c1f2e;
+}
+
