@@ -1,5 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Space+Grotesk:wght@300..700&family=Ubuntu+Sans+Mono:ital,wght@0,400..700;1,400..700&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -17,6 +16,36 @@ body {
 .lato {
   font-family: "Lato", sans-serif;
 }
+
+.ubuntu {
+  font-family: "Ubuntu Sans Mono", monospace;
+}
+
+.space {
+  font-family: "Space Grotesk", sans-serif;
+}
+
+
+
+.gradient-text {
+  position: relative;
+  overflow: hidden;
+}
+
+.gradient-text::before {
+  content: attr(data-text);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  color: transparent;
+  background: linear-gradient(to right, #ff0000, #00ff00);
+  -webkit-background-clip: text;
+  background-clip: text;
+  z-index: -1;
+}
+
 /* ======== stream css overrides ======== */
 .str-video__call-stats {
   max-width: 500px;
@@ -133,7 +162,7 @@ body {
 
 
 ::-webkit-scrollbar {
-  width: 10px; /* Width of the scrollbar */
+  width: 5px; /* Width of the scrollbar */
 }
 
 /* For Chrome */
@@ -150,3 +179,7 @@ body {
   background-color: #1c1f2e;
 }
 
+.str-video__paginated-grid-layout .str-video__paginated-grid-layout__group{
+  display: flex;
+  flex-wrap: wrap;
+}

@@ -64,10 +64,11 @@ const CallList = ({ type }: { type: 'ended' | 'upcoming' | 'recordings' }) => {
   const noCallsMessage = getNoCallsMessage();
 
   return (
-    <div className="grid grid-cols-1 gap-5 xl:grid-cols-2">
+    <div className="grid grid-cols-1 gap-5 md:grid-cols-2 xl:grid-cols-3">
       {calls && calls.length > 0 ? (
         calls.map((meeting: Call | CallRecording) => (
-          <MeetingCard
+          <div className='border rounded-md border-gray-600 bg-black/30'>
+            <MeetingCard
             key={(meeting as Call).id}
             icon={
               type === 'ended'
@@ -99,6 +100,7 @@ const CallList = ({ type }: { type: 'ended' | 'upcoming' | 'recordings' }) => {
                 : () => router.push(`/meeting/${(meeting as Call).id}`)
             }
           />
+          </div>
         ))
       ) : (
         <h1 className="text-2xl font-bold text-white">{noCallsMessage}</h1>

@@ -4,9 +4,13 @@ import Editor from "@monaco-editor/react";
 import ACTIONS from "@/actions/action";
 import { initSocket } from "../socket"; // Import initSocket function
 import { classnames } from "../utils/general";
-const CodeEditorWindow = ({ onChange, language, code, theme, handleCompile, processing }) => {
+import OutputWindow from "./OutputWindow";
+import OutputDetails from "./OutputDetails";
+import LanguagesDropdown from "./LanguagesDropdown";
+import ThemeDropdown from "./ThemeDropdown";
+const CodeEditorWindow = ({ onChange, language, code, theme, handleCompile, processing, outputDetails, handleThemeChange, onSelectChange }) => {
   const [value, setValue] = useState(code || ""); // Initial value for the editor
-
+  
   const handleEditorChange = (value) => {
     setValue(value);
     onChange("code", value); // Update parent component with new code
@@ -131,31 +135,61 @@ const CodeEditorWindow = ({ onChange, language, code, theme, handleCompile, proc
 
   // }
 
+  
+
   return (
-    <div className="overlay rounded-md lato overflow-hidden w-full h-full shadow-4xl">
-       <button
-              // onClick={handleCompileCode}
-              onClick={handleCompile}
-              disabled={!value}
-              className={classnames(
-                "mb-6 border-2 text-black font-[400] text-[14px] border-black z-10 rounded-md shadow-[5px_5px_0px_0px_rgba(0,0,0)] px-4 py-2 hover:shadow transition duration-200 bg-white flex-shrink-0",
-                !value ? "opacity-50" : ""
-              )}
-            >
-              {processing ? "Processing..." : "Compile and Execute"}
-            </button>
-      <Editor
-        height="75vh"
-        className="mt-4"
-        width="100%"
-        language={language || "javascript"}
-        value={value}
-        theme={theme}
-        defaultValue="// some comment"
-        onChange={handleEditorChange}
-      />
+    <div className="w-full h-full ">
+      <div className="flex justify-between items-center">
+      <button
+          onClick={handleCompile}
+          disabled={!value}
+          className={classnames(
+            "mb-6 border-2 text-black h-fit font-[400] text-[14px] border-black z-10 rounded-md shadow-[5px_5px_0px_0px_rgba(0,0,0)] px-4 py-2 hover:shadow transition duration-200 bg-white flex-shrink-0",
+            !value ? "opacity-50" : ""
+          )}
+        >
+          {processing ? "Processing..." : "Compile and Execute"}
+        </button>
+        <div className="flex flex-row justify-end">
+        <div className="px-4 py-2">
+          <LanguagesDropdown onSelectChange={onSelectChange} />
+        </div>
+        <div className="px-4 py-2">
+          <ThemeDropdown handleThemeChange={handleThemeChange} theme={theme} />
+        </div>
+      </div>
+      </div>
+       
+      <div className="flex gap-4">
+      <div className="overlay rounded-md lato overflow-hidden  w-[100%] shadow-4xl">
+        
+        <Editor
+          height="85vh"
+          className="w-full"
+          width="100%"
+          language={language || "javascript"}
+          value={value}
+          theme={theme}
+          defaultValue="// some comment"
+          onChange={handleEditorChange}
+        />
+
+      </div>
+
+      <div className="right-container mt-[px] flex flex-shrink-0 w-[30%] flex-col">
+        <OutputWindow outputDetails={outputDetails} />
+        <div className="flex flex-col items-end justify-end">
+        </div>
+        {outputDetails && <OutputDetails outputDetails={outputDetails} />}
+      </div>
+
      
     </div>
+    </div>
+
+
+
+
   );
 };
 export default CodeEditorWindow;

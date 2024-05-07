@@ -2,7 +2,7 @@ import React from "react";
 
 const OutputDetails = ({ outputDetails }: {outputDetails: any}) => {
   return (
-    <div className="metrics-container mt-4 flex lato flex-row gap-4 ">
+    <div className="metrics-container mt-4 flex lato flex-row gap-4 justify-end">
       <p className="text-sm">
         Status:{" "}
         <span className="font-semibold px-2 py-1 rounded-md bg-blue-1">

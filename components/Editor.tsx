@@ -1,3 +1,4 @@
+'use client'
 import React, { useEffect, useState } from "react";
 import CodeEditorWindow from "./CodeEditorWindow";
 import axios from "axios";
@@ -221,16 +222,16 @@ const Editor = () => {
       />
 
     
-      <div className="flex flex-row">
+      {/* <div className="flex flex-row justify-end">
         <div className="px-4 py-2">
           <LanguagesDropdown onSelectChange={onSelectChange} />
         </div>
         <div className="px-4 py-2">
           <ThemeDropdown handleThemeChange={handleThemeChange} theme={theme} />
         </div>
-      </div>
+      </div> */}
 
-<div className="flex flex-row space-x-4 h-[85vh] items-start px-4 pb-4">
+<div className="flex flex-row space-x-4 h-[90vh] items-start px-4 pb-4">
         <div className="flex flex-col w-full h-full justify-start items-end">
           <CodeEditorWindow
             code={code}
@@ -239,15 +240,18 @@ const Editor = () => {
             theme={theme.value}
             handleCompile={handleCompile}
             processing={processing}
+            outputDetails={outputDetails}
+            onSelectChange={onSelectChange}
+            handleThemeChange={handleThemeChange}
           />
         </div>
 
-        <div className="right-container flex flex-shrink-0 mt-[260px] w-[30%] flex-col">
+        {/* <div className="right-container mt-[55px] flex flex-shrink-0 w-[30%] flex-col">
           <OutputWindow outputDetails={outputDetails} />
           <div className="flex flex-col items-end">
           </div>
           {outputDetails && <OutputDetails outputDetails={outputDetails} />}
-        </div>
+        </div> */}
         </div>
     </>
   )};
