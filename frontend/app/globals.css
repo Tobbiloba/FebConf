@@ -10,7 +10,7 @@
 }
 
 body {
-  font-family: "Lato", sans-serif;
+  font-family: "Space Grotesk", sans-serif;
 }
 
 .lato {
@@ -175,6 +175,36 @@ body {
   background-color: #f1f1f1; /* Color of the scrollbar track */
 }
 
+
+
+.headerStyle {
+  max-width: 600px;
+  /* Add overflow to enable scrolling */
+  overflow: auto;
+}
+
+/* Define scrollbar styles */
+.headerStyle::-webkit-scrollbar {
+  width: 4px; /* Width of the scrollbar */
+  height: 4px;
+}
+
+/* Track */
+.headerStyle::-webkit-scrollbar-track {
+  background: #122846; /* Color of the track */
+}
+
+/* Handle */
+.headerStyle::-webkit-scrollbar-thumb {
+  background: #102a4c; /* Color of the scrollbar handle */
+}
+
+/* Handle on hover */
+.headerStyle::-webkit-scrollbar-thumb:hover {
+  background: #102a4c; /* Color of the scrollbar handle on hover */
+}
+
+
 .str-video__composite-button__button-group.str-video__composite-button__button-group--active-secondary {
   background-color: #1c1f2e;
 }
@@ -182,4 +212,27 @@ body {
 .str-video__paginated-grid-layout .str-video__paginated-grid-layout__group{
   display: flex;
   flex-wrap: wrap;
+}
+
+.minimap {
+  visibility: hidden;
+}
+/* 
+.decorationsOverviewRuler {
+  border: 1px solid red;
+  width: 2px;
+} */
+
+/* .scrollbar {
+  border: 1px solid rgb(0, 89, 255);
+  width: 2px;
+}
+.slider {
+  border: 1px solid rgb(0, 89, 255);
+  width: 2px;
+} */
+
+.rotate {
+
+  rotate: 180deg;
 }

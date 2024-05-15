@@ -10,8 +10,9 @@ const LanguagesDropdown = ({ onSelectChange }: {onSelectChange: any}) => {
       options={languageOptions}
       styles={customStyles}
       defaultValue={languageOptions[0]}
+      // value={languageOptions[0]}
       onChange={(selectedOption) => onSelectChange(selectedOption)}
-      className="bg-blue-1 text-white"
+      className="space"
     />
   );
 };

@@ -128,7 +128,7 @@ const MeetingTypeList = () => {
         className='bg-[#393603] border-[#766b05]'
         title="Code Editor"
         description="Share Code With Friends"
-        handleClick={() => setMeetingState('isInstantMeeting')}
+        handleClick={() => router.push(`/code-editor`)}
         buttonText='Access Code Editor'
         buttonStyle='bg-yellow-500 rounded-md text-black font-[500]'
         buttonIcon='/icons/arrow-right.svg'

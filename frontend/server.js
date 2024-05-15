@@ -10,7 +10,10 @@ const ACTIONS = {
     CODE_CHANGE: 'code-change',
     SYNC_CODE: 'sync-code',
     LEAVE: 'leave',
-    COMPILE_CODE: 'compile-code'
+    COMPILE_CODE: 'compile-code',
+    CHANGE_LANGUAGE: 'change-language',
+    CREATE_NEW_FILE: 'create-new-file',
+    RENAME_FILE_TITLE: 'rename-file-title'
 };
 
 
@@ -51,13 +54,31 @@ io.on('connection', (socket) => {
         });
     });
 
-    socket.on(ACTIONS.CODE_CHANGE, ({ roomId, code }) => {
-        socket.in(roomId).emit(ACTIONS.CODE_CHANGE, { code });
+    socket.on(ACTIONS.CODE_CHANGE, ({ roomId, code, id }) => {
+        
+        io.to(roomId).emit(ACTIONS.CODE_CHANGE, { code, id});
+        console.log(code)
+    });
+
+    socket.on(ACTIONS.SYNC_CODE, ({ socketId, code, id }) => {
+        io.to(socketId).emit(ACTIONS.CODE_CHANGE, { code , id});
+        console.log('sync')
+    });
+
+    socket.on(ACTIONS.CHANGE_LANGUAGE, ({ roomId, language }) => {
+        io.to(roomId).emit(ACTIONS.CHANGE_LANGUAGE, { language });
         // console.log(code)
     });
 
-    socket.on(ACTIONS.SYNC_CODE, ({ socketId, code }) => {
-        io.to(socketId).emit(ACTIONS.CODE_CHANGE, { code });
+    socket.on(ACTIONS.CREATE_NEW_FILE, ({ roomId, id }) => {
+        console.log('creat new code')
+        io.to(roomId).emit(ACTIONS.CREATE_NEW_FILE, {id});
+        // console.log(code)
+    });
+
+    socket.on(ACTIONS.RENAME_FILE_TITLE, ({ roomId, id, title }) => {
+        console.log(roomId, id, title)
+        io.to(roomId).emit(ACTIONS.RENAME_FILE_TITLE, {id, title});
         // console.log(code)
     });
 
@@ -68,6 +89,8 @@ io.on('connection', (socket) => {
         console.log(roomId)
         console.log('compile code')
     });
+
+    
 
     socket.on('disconnecting', () => {
         const rooms = [...socket.rooms];

@@ -5,7 +5,7 @@ import Navbar from '@/components/Navbar';
 import Sidebar from '@/components/Sidebar';
 
 export const metadata: Metadata = {
-  title: 'YOOM',
+  title: 'CodeMeet',
   description: 'A workspace for your team, powered by Stream Chat and Clerk.',
 };
 
@@ -17,7 +17,7 @@ const RootLayout = ({ children }: Readonly<{children: ReactNode}>) => {
       <div className="flex">
         <Sidebar />
         
-        <section className="flex bg-dark-1 min-h-screen flex-1 flex-col pt-24">
+        <section className="flex bg-dark-1 min-h-screen flex-1 flex-col pt-12">
           <div className="w-full">{children}</div>
         </section>
       </div>

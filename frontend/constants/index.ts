@@ -8,6 +8,7 @@ import { IoAdd } from "react-icons/io5";
 import { IoCodeSlash } from "react-icons/io5";
 import { GoCodespaces } from "react-icons/go";
 import { GoHistory } from "react-icons/go";
+import { HiMiniPlus } from "react-icons/hi2";
 export const sidebarLinks = [
   {
     title: 'Video',
@@ -34,7 +35,7 @@ export const sidebarLinks = [
         label: 'Recordings',
       },
       {
-        imgURL: IoAdd,
+        imgURL: HiMiniPlus,
         route: '/personal-room',
         label: 'Personal Room',
       },

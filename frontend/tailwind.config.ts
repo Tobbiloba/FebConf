@@ -39,9 +39,6 @@ const config = {
         purple: {
           1: '#830EF9',
         },
-        yellow: {
-          1: '#F9A90E',
-        },
       },
       keyframes: {
         'accordion-down': {

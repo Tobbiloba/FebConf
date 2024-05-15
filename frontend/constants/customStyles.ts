@@ -5,26 +5,25 @@ export const customStyles = {
     maxWidth: "14rem",
     minWidth: "12rem",
     borderRadius: "5px",
-    color: "#fff",
+    color: "black",
     fontSize: "0.8rem",
-    lineHeight: "1.75rem",
-    backgroundColor: "white",
+    lineHeight: "1.5rem",
+    backgroundColor: "#102a4c",
     cursor: "pointer",
-    border: "2px solid #000000",
-    boxShadow: "5px 5px 0px 0px rgba(0,0,0);",
-    ":hover": {
-      border: "2px solid #000000",
-      boxShadow: "none",
-    },
+    // boxShadow: "5px 5px 0px 0px rgba(0,0,0);",
+    // ":hover": {
+    //   border: "2px solid #000000",
+    //   boxShadow: "none",
+    // },
   }),
   option: (styles: any) => {
     return {
       ...styles,
-      color: "#000",
+      color: "white",
       fontSize: "0.8rem",
       lineHeight: "1.75rem",
       width: "100%",
-      background: "#fff",
+      background: "#102a4c",
       ":hover": {
         backgroundColor: "rgb(243 244 246)",
         color: "#000",
@@ -37,9 +36,7 @@ export const customStyles = {
       ...styles,
       backgroundColor: "#fff",
       maxWidth: "14rem",
-      border: "2px solid #000000",
       borderRadius: "5px",
-      boxShadow: "5px 5px 0px 0px rgba(0,0,0);",
     };
   },
 
@@ -49,6 +46,12 @@ export const customStyles = {
       color: "#fff",
       fontSize: "0.8rem",
       lineHeight: "1.75rem",
+    };
+  },
+  singleValue: (styles: any) => {
+    return {
+      ...styles,
+      color: "white",
     };
   },
 };

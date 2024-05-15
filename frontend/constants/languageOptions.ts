@@ -4,48 +4,57 @@ export const languageOptions = [
     name: "JavaScript (Node.js 12.14.0)",
     label: "JavaScript (Node.js 12.14.0)",
     value: "javascript",
+    extension: 'js'
   },
   {
     id: 45,
     name: "Assembly (NASM 2.14.02)",
     label: "Assembly (NASM 2.14.02)",
     value: "assembly",
+    extension: 'asm'
   },
   {
     id: 46,
     name: "Bash (5.0.0)",
     label: "Bash (5.0.0)",
     value: "bash",
+    extension: 'rc'
   },
   {
     id: 47,
     name: "Basic (FBC 1.07.1)",
     label: "Basic (FBC 1.07.1)",
     value: "basic",
+    extension: 'bs'
   },
   {
     id: 75,
     name: "C (Clang 7.0.1)",
     label: "C (Clang 7.0.1)",
     value: "c",
+    extension: 'c'
   },
   {
     id: 76,
     name: "C++ (Clang 7.0.1)",
     label: "C++ (Clang 7.0.1)",
     value: "cpp",
+    extension: 'c++'
   },
   {
     id: 48,
     name: "C (GCC 7.4.0)",
     label: "C (GCC 7.4.0)",
     value: "c",
+    extension: 'c'
   },
   {
     id: 52,
     name: "C++ (GCC 7.4.0)",
     label: "C++ (GCC 7.4.0)",
     value: "cpp",
+    extension: 'c++'
+    
   },
   {
     id: 49,

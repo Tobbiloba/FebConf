@@ -15,7 +15,7 @@ import CustomInput from "./CustomInput";
 import OutputDetails from "./OutputDetails";
 import ThemeDropdown from "./ThemeDropdown";
 import LanguagesDropdown from "./LanguagesDropdown";
-
+import { cn } from "@/utils/cn";
 const javascriptDefault = `/**
 * Problem: Binary Search: Search a sorted array for a target value.
 */
@@ -72,6 +72,7 @@ const Editor = () => {
   const onChange = (action: any, data: any) => {
     switch (action) {
       case "code": {
+        console.log(code)
         setCode(data);
         break;
       }
@@ -231,7 +232,7 @@ const Editor = () => {
         </div>
       </div> */}
 
-<div className="flex flex-row space-x-4 h-[90vh] items-start px-4 pb-4">
+<div className={cn('h-full flex flex-row space-x-4 items-start')}>
         <div className="flex flex-col w-full h-full justify-start items-end">
           <CodeEditorWindow
             code={code}

@@ -4,7 +4,7 @@ import monacoThemes from "monaco-themes/themes/themelist.json";
 import { customStyles } from "../constants/customStyles";
 
 const ThemeDropdown = ({ handleThemeChange, theme }: {handleThemeChange: any, theme: any}) => {
-  return (
+  return ( 
     <Select
       placeholder={`Select Theme`}
       // options={languageOptions}
@@ -16,6 +16,7 @@ const ThemeDropdown = ({ handleThemeChange, theme }: {handleThemeChange: any, th
       value={theme}
       styles={customStyles}
       onChange={handleThemeChange}
+      className="space"
     />
   );
 };

@@ -87,7 +87,7 @@ const Home = () => {
       <section className="flex max-w-[80rem] space size-full lato flex-col gap-5 text-white">
      
      <div className="flex flex-col mb-8  mx-auto">
-     <div className='border-b-[1px] border-gray-600 pb-4 flex flex-col'>
+     <div className='border-b-[1px] border-gray-600 pb-4 py-8 flex flex-col'>
        <h1 className='text-4xl font-medium'>Codemeet</h1>
 
      <p
@@ -97,7 +97,7 @@ const Home = () => {
            text-gray-400
            "
      >
-       FebConf Virtual Meetings is an advanced video conferencing platform designed to streamline communication and collaboration for individuals and teams across distances. 
+       Codemeet Virtual Meetings is an advanced video conferencing platform designed to streamline communication and collaboration for individuals and teams across distances. 
      </p>
      </div>
 
